@@ -15,4 +15,4 @@ This will run each test case 7 times, with the output is provided via CLI and as
 This is a tool that is intended to be run **on** your repo and not in it and therefore should be installed globally via `npm install @andrew-codes/yarn-npm-performance -g`.
 
 ## Running
-Change into your repo's directory and run `yarn-npm-performance`. Once finished, you will find the output in the file `yarn-versus-npm-install-performance.csv`.
+Change into your repo's directory and run `yarn-npm-performance`. This will run one test run for each test case. Optionally provide a number of test runs to process via `yarn-npm-performance 7`. Once finished, you will find the output in the file `yarn-versus-npm-install-performance.csv`.

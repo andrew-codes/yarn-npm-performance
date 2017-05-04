@@ -35,7 +35,7 @@ const runTest = ({tool, cleanNodeModules, cleanLockFile}, testRunCount) => {
         versionCommand = 'npm --version';
         installCommand = 'npm install';
     }
-    version = execSync(versionCommand, stdio);
+    const version = execSync(versionCommand);
     console.log(`Running test ${testRunCount}`);
     const hrStart = process.hrtime();
     execSync(installCommand, stdio);
@@ -71,7 +71,7 @@ const testCases = [
     }
 ];
 
-const testRunCount = 7;
+const testRunCount = process.argv[2] ? parseInt(process.argv[2]) : 1;
 const testRuns = testCases.reduce((output, testCase) => output.concat(new Array(testRunCount).fill(testCase)), []);
 const testRunOutput = testRuns.map((testRun, index) => runTest(testRun, index).join(',')).join('\r\n');
 console.log(testRunOutput);
