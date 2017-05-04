@@ -3,7 +3,9 @@
   "private": false,
   "version": "1.0.0",
   "description": "Get performance comparisons for your repository between yarn and npm.",
-  "bin": "bin/index.js",
+  "bin": {
+    "yarn-npm-performance": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
