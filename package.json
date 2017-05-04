@@ -1,7 +1,7 @@
 {
   "name": "@andrew-codes/yarn-npm-performance",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get performance comparisons for your repository between yarn and npm.",
   "bin": {
     "yarn-npm-performance": "bin/index.js"
