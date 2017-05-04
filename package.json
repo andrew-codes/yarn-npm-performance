@@ -1,0 +1,21 @@
+{
+  "name": "yarn-npm-performance-testing",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-codes/yarn-npm-performance-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrew-codes/yarn-npm-performance-testing/issues"
+  },
+  "homepage": "https://github.com/andrew-codes/yarn-npm-performance-testing#readme",
+  "dependencies": {}
+}
