@@ -35,7 +35,7 @@ const runTest = ({tool, cleanNodeModules, cleanLockFile}, testRunCount) => {
         versionCommand = 'npm --version';
         installCommand = 'npm install';
     }
-    const version = execSync(versionCommand);
+    const version = execSync(versionCommand).toString().trim();
     console.log(`Running test ${testRunCount}`);
     const hrStart = process.hrtime();
     execSync(installCommand, stdio);
@@ -73,8 +73,8 @@ const testCases = [
 
 const testRunCount = process.argv[2] ? parseInt(process.argv[2]) : 1;
 const testRuns = testCases.reduce((output, testCase) => output.concat(new Array(testRunCount).fill(testCase)), []);
-const testRunOutput = testRuns.map((testRun, index) => runTest(testRun, index).join(',')).join('\r\n');
-console.log(testRunOutput);
+const testRunOutput = testRuns.map((testRun, index) => runTest(testRun, index).join(',')).join('\n');
+console.log('output', testRunOutput);
 fs.writeFile('yarn-versus-npm-install-performance.csv', testRunOutput, (error) => {
     if (error) {
         throw new Error(error);
